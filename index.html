@@ -40,19 +40,31 @@
             font-size: 32px;
             font-weight: bold;
             color: #FF7043;
-            animation: fadeInUp 1s ease-out forwards; /* Reduced animation time and set it to stay visible */
-            opacity: 0;  /* Initially hidden */
+            animation: cascadingTitle 3s ease-in-out infinite; /* Continuous animation */
+            opacity: 1;
         }
 
-        /* Fade-In Animation */
-        @keyframes fadeInUp {
+        /* Cascading Animation */
+        @keyframes cascadingTitle {
             0% {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(-20px);
             }
-            100% {
+            25% {
                 opacity: 1;
                 transform: translateY(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(20px);
+            }
+            75% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
             }
         }
 
@@ -182,7 +194,7 @@
                 <div class="details">
                     <h3>Phone Support</h3>
                     <p>Speak directly with our support team</p>
-                    <p>+1 (555) 123-4567<br>Mon-Fri: 8AM-8PM (GMT+2)</p>
+                    <p>+233243244547<br>Mon-Fri: 8AM-8PM (GMT+2)</p>
                 </div>
                 <button class="contact-button">Call Now</button>
             </div>
