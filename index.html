@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - MHA</title>
+    <title>Mental Health Ambassadors - Contact</title>
     <style>
         /* Basic Reset */
         * {
@@ -40,6 +40,20 @@
             font-size: 32px;
             font-weight: bold;
             color: #FF7043;
+            animation: fadeInUp 2s ease-out;
+            opacity: 0;  /* Initially hidden */
+        }
+
+        /* Fade-In Animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Get in Touch Section */
@@ -146,7 +160,7 @@
     <div class="container">
         <!-- Header -->
         <header>
-            <h1>MHA</h1>
+            <h1>Mental Health Ambassadors</h1>
         </header>
 
         <!-- Get in Touch Section -->
