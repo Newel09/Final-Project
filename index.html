@@ -3,57 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Thrive Final Project</title>
+    <title>Contact - MHA</title>
     <style>
-        body {
-            background-color: #000000; /* Grey background */
+        /* Basic Reset */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body & Container */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #FF7043;
+        }
+
+        /* Get in Touch Section */
+        .get-in-touch {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .get-in-touch h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .get-in-touch p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Methods */
+        .contact-methods {
+            margin-top: 20px;
+        }
+
+        .contact-method {
+            background: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .contact-method .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
-            font-family: 'Arial', sans-serif;
         }
 
-        h1 {
-            font-size: 3rem;
-            font-weight: bold;
+        .contact-method .phone-icon {
+            background-color: #4CAF50;
             color: white;
-            text-transform: uppercase;
-            animation: textAnimation 4s infinite alternate;
-            background-image: linear-gradient(45deg, #ff0080, #ff8c00, #fffb00, #00ff00, #0080ff, #8000ff);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
         }
 
-        @keyframes textAnimation {
-            0% {
-                transform: translateY(-30px);
-                opacity: 0;
-            }
-            50% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(30px);
-                opacity: 0;
-            }
+        .contact-method .email-icon {
+            background-color: #2196F3;
+            color: white;
         }
 
-        /* Optional: Add a glowing effect for the text */
-        h1 {
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+        .contact-method .details h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .contact-method .details p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .contact-method .contact-button {
+            background-color: #FF7043;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Mobile View */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .contact-method {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-method .icon {
+                margin-bottom: 10px;
+            }
+
+            .contact-method .details {
+                margin-left: 0;
+            }
+
+            .contact-method .contact-button {
+                width: 100%;
+                margin-top: 10px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>My Thrive Final Project is Ready. Well Done Newel!!!!</h1>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>MHA</h1>
+        </header>
+
+        <!-- Get in Touch Section -->
+        <section class="get-in-touch">
+            <h2>Get in Touch</h2>
+            <p>We're here to help and answer any questions you might have. Reach out to us and we'll respond as soon as we can.</p>
+
+            <h3>How to Reach Us</h3>
+            <p>Choose the contact method that works best for you.</p>
+        </section>
+
+        <!-- Contact Methods -->
+        <section class="contact-methods">
+            <!-- Phone Support -->
+            <div class="contact-method">
+                <div class="icon phone-icon">
+                    📞
+                </div>
+                <div class="details">
+                    <h3>Phone Support</h3>
+                    <p>Speak directly with our support team</p>
+                    <p>+1 (555) 123-4567<br>Mon-Fri: 8AM-8PM (GMT+2)</p>
+                </div>
+                <button class="contact-button">Call Now</button>
+            </div>
+
+            <!-- Email Support -->
+            <div class="contact-method">
+                <div class="icon email-icon">
+                    ✉️
+                </div>
+                <div class="details">
+                    <h3>Email Support</h3>
+                    <p>Send us a detailed message</p>
+                    <p>support@mentalhealthambassadors.org<br>Response within 24 hours</p>
+                </div>
+                <button class="contact-button">Send Email</button>
+            </div>
+        </section>
+
+    </div>
 
 </body>
 </html>
